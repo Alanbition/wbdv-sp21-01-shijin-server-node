@@ -29,5 +29,5 @@ app.use(bodyParser.json())
 require('./controllers/quiz-attempts-controller')(app)
 require('./controllers/quizzes-controller')(app)
 require('./controllers/questions-controller')(app)
-
-app.listen(3000)
+require('dotenv').config();
+app.listen(process.env.PORT || 3000);
